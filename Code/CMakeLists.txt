@@ -134,9 +134,10 @@ endif()
 include(build_environment)
 include(platform_checks)
 
-if(HAVE_ISNAN)
-  add_definitions(-DHAVE_ISNAN)
-endif()
+## will not compiler on Ubuntu 16.04, Gcc 5.4 if keeping this
+#if(HAVE_ISNAN)
+#  add_definitions(-DHAVE_ISNAN)
+#endif()
 
 if(HAVE_STD_ISNAN)
   add_definitions(-DHAVE_STD_ISNAN)
